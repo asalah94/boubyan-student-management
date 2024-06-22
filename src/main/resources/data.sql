@@ -37,7 +37,6 @@ CREATE TABLE user_courses (
 );
 
 INSERT INTO roles(name) VALUES('ROLE_USER');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 
 INSERT INTO users (username, email, password) VALUES ('tiger', 'user1@example.com', '$2a$12$rPYIxQrTjPvr2Cq5XZdmw../SisdEswQh5IUxPWQesnukWJXo.27e');

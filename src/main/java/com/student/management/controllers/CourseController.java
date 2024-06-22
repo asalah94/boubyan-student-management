@@ -3,8 +3,8 @@ package com.student.management.controllers;
 import com.student.management.payload.request.CourseRegistrationRequest;
 import com.student.management.payload.response.CourseDto;
 import com.student.management.payload.response.MessageResponse;
-import com.student.management.service.CourseService;
-import com.student.management.service.impl.PdfGeneratorService;
+import com.student.management.security.services.CourseService;
+import com.student.management.security.services.PdfGeneratorService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -12,7 +12,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import com.student.management.models.Course;
 
 import java.io.IOException;
 import java.util.List;
@@ -52,7 +51,7 @@ public class CourseController {
     @GetMapping("/schedule/pdf")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public ResponseEntity<byte[]> getCourseSchedulePdf() {
-        List<CourseDto> courses = courseService.getAllCourses(); // Adjust as per your service method
+        List<CourseDto> courses = courseService.getAllCourses();
 
         try {
             byte[] pdfBytes = pdfGeneratorService.generateCourseSchedulePdf(courses);
@@ -66,7 +65,6 @@ public class CourseController {
                     .contentLength(pdfBytes.length)
                     .body(pdfBytes);
         } catch (IOException e) {
-            // Handle PDF generation exception
             e.printStackTrace();
             return ResponseEntity.status(500).body(null);
         }

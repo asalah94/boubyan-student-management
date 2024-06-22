@@ -1,5 +1,6 @@
-package com.student.management.security.services;
+package com.student.management.security.services.impl;
 
+import com.student.management.exception.ResourceNotFoundException;
 import com.student.management.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
   @Transactional
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     User user = userRepository.findByUsername(username)
-        .orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
+        .orElseThrow(() -> new ResourceNotFoundException("User Not Found with username: " + username));
 
     return UserDetailsImpl.build(user);
   }

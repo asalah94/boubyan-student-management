@@ -1,6 +1,5 @@
-package com.student.management.service;
+package com.student.management.security.services;
 
-import com.student.management.models.Course;
 import com.student.management.payload.response.CourseDto;
 
 import java.io.IOException;

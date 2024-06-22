@@ -1,6 +1,7 @@
-package com.student.management.service.impl;
+package com.student.management.security.services.impl;
 
 import com.student.management.payload.response.CourseDto;
+import com.student.management.security.services.PdfGeneratorService;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -10,8 +11,9 @@ import org.springframework.stereotype.Service;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
+
 @Service
-public class PdfGeneratorService {
+public class PdfGeneratorServiceImpl implements PdfGeneratorService {
 
     private static final float FONT_SIZE = 12;
     private static final PDType1Font FONT = PDType1Font.TIMES_ROMAN;
@@ -19,6 +21,7 @@ public class PdfGeneratorService {
     private static final float MARGIN = 50;
     private static final float WIDTH = 500;
 
+    @Override
     public byte[] generateCourseSchedulePdf(List<CourseDto> courses) throws IOException {
         PDDocument document = new PDDocument();
         PDPage page = new PDPage();

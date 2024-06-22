@@ -1,4 +1,4 @@
-package com.student.management.security.services;
+package com.student.management.security.services.impl;
 
 import java.util.Collection;
 import java.util.List;
