@@ -1,4 +1,4 @@
-package com.student.management.security.services.impl;
+package com.student.management.services.impl;
 
 import com.student.management.exception.ResourceNotFoundException;
 import com.student.management.models.ERole;
@@ -7,7 +7,7 @@ import com.student.management.models.User;
 import com.student.management.payload.request.SignupRequest;
 import com.student.management.repository.RoleRepository;
 import com.student.management.repository.UserRepository;
-import com.student.management.security.services.UserService;
+import com.student.management.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.student.management.security.services.impl;
+package com.student.management.services.impl;
 
 import com.student.management.exception.ResourceNotFoundException;
 import com.student.management.models.User;

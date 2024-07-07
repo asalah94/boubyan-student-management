@@ -1,4 +1,4 @@
-package com.student.management.security.services.impl;
+package com.student.management.services.impl;
 
 import com.student.management.exception.ResourceNotFoundException;
 import com.student.management.models.Course;
@@ -6,7 +6,7 @@ import com.student.management.models.User;
 import com.student.management.payload.response.CourseDto;
 import com.student.management.repository.CourseRepository;
 import com.student.management.repository.UserRepository;
-import com.student.management.security.services.CourseService;
+import com.student.management.services.CourseService;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;

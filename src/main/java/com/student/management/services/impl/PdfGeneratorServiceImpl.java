@@ -1,7 +1,7 @@
-package com.student.management.security.services.impl;
+package com.student.management.services.impl;
 
 import com.student.management.payload.response.CourseDto;
-import com.student.management.security.services.PdfGeneratorService;
+import com.student.management.services.PdfGeneratorService;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;

@@ -2,7 +2,7 @@ package com.student.management.security;
 
 import com.student.management.security.jwt.AuthEntryPointJwt;
 import com.student.management.security.jwt.AuthTokenFilter;
-import com.student.management.security.services.impl.UserDetailsServiceImpl;
+import com.student.management.services.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

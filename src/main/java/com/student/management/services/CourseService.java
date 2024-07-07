@@ -1,4 +1,4 @@
-package com.student.management.security.services;
+package com.student.management.services;
 
 import com.student.management.payload.response.CourseDto;
 
